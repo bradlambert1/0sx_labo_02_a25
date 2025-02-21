@@ -97,19 +97,19 @@ void leds(int potValue) {
       pin ++;
     }
   } else if (pot100 < 50) {
-  pin = pin - (pinDiff * (1*(1.0/4.0)));
+  pin = pin - 1;
   for (int i = 0; i < bulbsPerBracket + 1; i++) {
     analogWrite(pin, 255);
     pin++;
   }
   } else if (pot100 < 75) {
-  pin = pin - (pinDiff * (2*(1.0/4.0)));
+  pin = pin - 2;
   for (int i = 0; i < bulbsPerBracket + 2; i++) {
     analogWrite(pin, 255);
     pin++;
   }
   } else if (pot100 <= 100) {
-  pin = pin - (pinDiff * (3*(1.0/4.0)));
+  pin = pin - 3;
   for (int i = 0; i < bulbsPerBracket + 3; i++) {
     analogWrite(pin, 255);
     pin++;
